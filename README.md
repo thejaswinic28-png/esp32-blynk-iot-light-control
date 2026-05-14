@@ -100,7 +100,7 @@ This project was fully simulated using Wokwi IoT Simulator.
 
 ## Blynk Mobile Dashboard
 
-![Blynk Dashboard with button settings in a Android phone](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Blynk%20dashboard%20with%20Button%20Setup.png)
+![Blynk dashboard with Button Settings in a Android phone](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Blynk%20dashboard%20with%20Button%20Setup.png)
 
 ---
 
