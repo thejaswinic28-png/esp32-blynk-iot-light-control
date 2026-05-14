@@ -1,161 +1,159 @@
 # ESP32 Blynk IoT Light Control
 
-An IoT-based wireless light control system using ESP32, Blynk Cloud, and Wokwi simulation.  
-This project allows users to control an LED remotely from a mobile application through the internet.
+An IoT-based wireless light control system using ESP32, Blynk Cloud, and Wokwi simulation.
+
+This project allows users to remotely control an LED using the Blynk mobile application through the internet.
 
 ---
 
 # Project Overview
 
-This project demonstrates real-time IoT communication between:
-- ESP32 microcontroller
-- Blynk Cloud platform
-- Mobile application dashboard
+This project demonstrates real-time communication between ESP32 and the Blynk IoT platform.
 
-The LED connected to the ESP32 can be turned ON/OFF remotely using the Blynk mobile app.
+The ESP32 connects to WiFi and communicates with the Blynk Cloud server.  
+A virtual button created in the Blynk mobile app controls an LED connected to the ESP32.
+
+The entire system is simulated using Wokwi IoT Simulator.
 
 ---
 
 # Features
 
-- Wireless LED control using smartphone
-- Real-time communication through Blynk Cloud
+- Remote LED ON/OFF control
+- Real-time mobile app interaction
 - ESP32 WiFi connectivity
-- Mobile app dashboard control
-- Wokwi online simulation support
+- Blynk Cloud integration
 - Serial monitor debugging
-- Beginner-friendly IoT project
+- Wokwi simulation support
+- IoT-based wireless automation
 
 ---
 
-# Technologies Used
-
-- ESP32
-- Blynk IoT Platform
-- Arduino Framework
-- Wokwi Simulator
-- WiFi Communication
-- GitHub
-
----
-
-# Components Required
+# Components Used
 
 | Component | Quantity |
-| ESP32 Dev Board | 1 |
+|---|---|
+| ESP32 Dev Module | 1 |
 | LED | 1 |
 | 220Ω Resistor | 1 |
 | Jumper Wires | Few |
-| Blynk Mobile App | 1 |
 
 ---
 
 # Circuit Connections
 
-| ESP32 Pin | Connected To |
+| Component | ESP32 Pin |
 |---|---|
-| GPIO 2 | LED Positive via 220Ω resistor |
-| GND | LED Negative |
+| LED Anode (+) | GPIO2 |
+| LED Cathode (-) | GND (through 220Ω resistor) |
 
 ---
 
 # Blynk Configuration
 
-## Template Details
+| Parameter | Value |
+|---|---|
+| Virtual Pin | V0 |
+| Widget Type | Button |
+| Mode | Switch |
 
-```cpp
-#define BLYNK_TEMPLATE_ID "TMPL3xDFac_G6"
-#define BLYNK_TEMPLATE_NAME "ESP32 IoT Light Control"
+---
 
-Virtual Pin Used
-V0
-Widget Used
-Button Widget
-Mode: Switch
-Datastream: V0
-Working Principle
-ESP32 connects to WiFi.
-ESP32 connects to Blynk Cloud.
-User presses button in Blynk mobile app.
-Blynk sends command to ESP32.
-ESP32 changes GPIO state.
-LED turns ON or OFF.
-Wokwi Simulation
+# Working Principle
 
-This project was fully simulated using Wokwi.
+1. ESP32 connects to WiFi.
+2. ESP32 authenticates with Blynk Cloud.
+3. User presses the virtual button in the Blynk mobile app.
+4. Blynk sends the command to ESP32 over the internet.
+5. ESP32 turns the LED ON or OFF accordingly.
+6. LED status is displayed in the serial monitor.
 
-Simulation includes:
+---
 
-ESP32
-LED
-Resistor
-Blynk cloud communication
-Serial Monitor Output
+# Libraries Used
 
-Example output:
+- WiFi.h
+- WiFiClient.h
+- BlynkSimpleEsp32.h
 
+---
+
+# Wokwi Simulation
+
+This project was fully simulated using Wokwi IoT Simulator.
+
+---
+
+# Simulation Images
+
+## Circuit Simulation
+
+![Circuit Simulation](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20glowing.png)
+
+---
+
+## LED OFF Condition
+
+![LED OFF](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20Turned%20OFF.png)
+
+---
+
+## Blynk Mobile Dashboard
+
+![Blynk Dashboard](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Blynk%20dashboard%20with%20Button%20Setup.png)
+
+---
+
+## Button Press Detection
+
+![Button Press](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Button%20working%20properly%20after%20button%20press.png)
+
+---
+
+## Serial Monitor Output
+
+![Console Output](Simulation%20Images%20and%20Mobile%20App%20Screenshots/ConsoleResults.png)
+
+---
+
+# Serial Monitor Output Example
+
+```text
 ESP32 Connected to Blynk
+
 LED State: 255
 LED State: 0
-LED State: 255
-Project Structure
-ESP32_Blynk_IoT_Light_Control/
-│
-├── sketch.ino
-├── diagram.json
-├── libraries.txt
-├── wokwi-project.txt
-│
-├── Simulation Images/
-│
-└── Mobile App Screenshots/
-Setup Instructions
-1. Create Blynk Template
-Open Blynk Console
-Create new template
-Hardware: ESP32
-Connection Type: WiFi
-2. Add Datastream
+```
 
-Create:
+---
 
-Virtual Pin: V0
-Type: Integer
-3. Add Device
+# Applications
 
-Create device from template and copy:
+- Smart home automation
+- Wireless appliance control
+- IoT learning projects
+- Remote lighting systems
+- Cloud-connected embedded systems
 
-Auth Token
-4. Configure Mobile Dashboard
+---
 
-Add:
+# Future Improvements
 
-Button Widget
-Datastream: V0
-Mode: Switch
-5. Run Simulation
-Open project in Wokwi
-Start simulation
-Open Blynk mobile app
-Control LED remotely
-Applications
-Smart Home Automation
-Wireless Appliance Control
-IoT Learning Projects
-Cloud-Controlled Embedded Systems
-Remote Monitoring and Control
-Future Improvements
-Relay Module Integration
-Real Appliance Switching
-Voice Assistant Integration
-MQTT Communication
-Sensor Integration
-Web Dashboard
-OTA Firmware Updates
-Author
+- Multiple appliance control
+- Voice assistant integration
+- Mobile notifications
+- Energy monitoring
+- Relay module integration
+- Home automation dashboard
+
+---
+
+# Author
 
 Thejaswini C
 
-License
+---
 
-This project is open-source and available for learning and educational purposes.
+# GitHub Repository Description
+
+ESP32-based IoT light control system using Blynk Cloud and Wokwi simulation for real-time wireless LED control.
