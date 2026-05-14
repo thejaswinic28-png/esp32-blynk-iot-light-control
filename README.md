@@ -94,25 +94,25 @@ This project was fully simulated using Wokwi IoT Simulator.
 
 ## LED OFF Condition
 
-![LED OFF](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20Turned%20OFF.png)
+![LED Turned OFF](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20Turned%20OFF.png)
 
 ---
 
 ## Blynk Mobile Dashboard
 
-![Blynk Dashboard](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Blynk%20dashboard%20with%20Button%20Setup.png)
+![Blynk Dashboard with button settings in a Android phone](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Blynk%20dashboard%20with%20Button%20Setup.png)
 
 ---
 
 ## Button Press Detection
 
-![Button Press](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Button%20working%20properly%20after%20button%20press.png)
+![Button notifying on pressing while being offline](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Button%20working%20properly%20after%20button%20press.png)
 
 ---
 
 ## Serial Monitor Output
 
-![Console Output](Simulation%20Images%20and%20Mobile%20App%20Screenshots/ConsoleResults.png)
+![Console Results](Simulation%20Images%20and%20Mobile%20App%20Screenshots/ConsoleResults.png)
 
 ---
 
