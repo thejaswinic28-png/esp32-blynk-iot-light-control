@@ -2,29 +2,26 @@
 
 An IoT-based wireless light control system using ESP32, Blynk Cloud, and Wokwi simulation.
 
-This project allows users to remotely control an LED using the Blynk mobile application through the internet.
+This project demonstrates real-time remote LED control using a mobile application connected through the Blynk Cloud platform.
 
 ---
 
 # Project Overview
 
-This project demonstrates real-time communication between ESP32 and the Blynk IoT platform.
+The ESP32 connects to WiFi and communicates with the Blynk Cloud server.
 
-The ESP32 connects to WiFi and communicates with the Blynk Cloud server.  
-A virtual button created in the Blynk mobile app controls an LED connected to the ESP32.
-
-The entire system is simulated using Wokwi IoT Simulator.
+Using the Blynk mobile application, users can remotely switch an LED ON or OFF through the internet. The entire hardware setup and testing are simulated in Wokwi.
 
 ---
 
 # Features
 
 - Remote LED ON/OFF control
-- Real-time mobile app interaction
-- ESP32 WiFi connectivity
 - Blynk Cloud integration
-- Serial monitor debugging
-- Wokwi simulation support
+- Mobile app dashboard control
+- ESP32 WiFi communication
+- Real-time serial monitor output
+- Wokwi virtual simulation
 - IoT-based wireless automation
 
 ---
@@ -33,7 +30,7 @@ The entire system is simulated using Wokwi IoT Simulator.
 
 | Component | Quantity |
 |---|---|
-| ESP32 Dev Module | 1 |
+| ESP32 Dev Board | 1 |
 | LED | 1 |
 | 220Ω Resistor | 1 |
 | Jumper Wires | Few |
@@ -45,17 +42,19 @@ The entire system is simulated using Wokwi IoT Simulator.
 | Component | ESP32 Pin |
 |---|---|
 | LED Anode (+) | GPIO2 |
-| LED Cathode (-) | GND (through 220Ω resistor) |
+| LED Cathode (-) | GND through 220Ω resistor |
 
 ---
 
 # Blynk Configuration
 
-| Parameter | Value |
+| Setting | Value |
 |---|---|
+| Template Name | ESP32 IoT Light Control |
+| Platform | Blynk Cloud |
 | Virtual Pin | V0 |
 | Widget Type | Button |
-| Mode | Switch |
+| Button Mode | Switch |
 
 ---
 
@@ -64,55 +63,63 @@ The entire system is simulated using Wokwi IoT Simulator.
 1. ESP32 connects to WiFi.
 2. ESP32 authenticates with Blynk Cloud.
 3. User presses the virtual button in the Blynk mobile app.
-4. Blynk sends the command to ESP32 over the internet.
-5. ESP32 turns the LED ON or OFF accordingly.
+4. Blynk sends data to ESP32 over the internet.
+5. ESP32 turns the LED ON or OFF.
 6. LED status is displayed in the serial monitor.
 
 ---
 
 # Libraries Used
 
-- WiFi.h
-- WiFiClient.h
-- BlynkSimpleEsp32.h
+```cpp
+WiFi.h
+WiFiClient.h
+BlynkSimpleEsp32.h
+```
 
 ---
 
 # Wokwi Simulation
 
-This project was fully simulated using Wokwi IoT Simulator.
+This project was developed and tested using the Wokwi IoT simulator.
 
 ---
 
 # Simulation Images
 
-## Circuit Simulation
+## LED Glowing Condition
 
-![Circuit Simulation](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20glowing.png)
+![LED Glowing](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20glowing.png)
 
 ---
 
-## LED OFF Condition
+## LED Turned OFF Condition
 
-![LED Turned OFF](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20Turned%20OFF.png)
+![LED OFF](Simulation%20Images%20and%20Mobile%20App%20Screenshots/LED%20Turned%20OFF.png)
 
 ---
 
 ## Blynk Mobile Dashboard
 
-![Blynk dashboard with Button Settings in a Android phone](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Blynk%20dashboard%20with%20Button%20Setup.png)
+![Blynk Dashboard](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Blynk%20dashboard%20with%20Button%20Settings%20in%20a%20Android%20phone.jpeg)
 
 ---
 
-## Button Press Detection
+## Button Working Properly After Device Online
 
-![Button notifying on pressing while being offline](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Button%20working%20properly%20after%20button%20press.png)
+![Button Working](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Button%20working%20properly%20after%20being%20online.jpeg)
 
 ---
 
-## Serial Monitor Output
+## Button Press Notification While Offline
 
-![Console Results](Simulation%20Images%20and%20Mobile%20App%20Screenshots/ConsoleResults.png)
+![Offline Notification](Simulation%20Images%20and%20Mobile%20App%20Screenshots/Button%20notifying%20on%20pressing%20while%20being%20Offline.jpeg)
+
+---
+
+## Serial Monitor Console Output
+
+![Console Output](Simulation%20Images%20and%20Mobile%20App%20Screenshots/ConsoleResults.png)
 
 ---
 
@@ -123,6 +130,7 @@ ESP32 Connected to Blynk
 
 LED State: 255
 LED State: 0
+LED State: 255
 ```
 
 ---
@@ -130,21 +138,20 @@ LED State: 0
 # Applications
 
 - Smart home automation
-- Wireless appliance control
+- Wireless lighting systems
 - IoT learning projects
-- Remote lighting systems
 - Cloud-connected embedded systems
+- Remote appliance control
 
 ---
 
 # Future Improvements
 
-- Multiple appliance control
-- Voice assistant integration
-- Mobile notifications
-- Energy monitoring
+- Multi-device control
 - Relay module integration
-- Home automation dashboard
+- Voice assistant support
+- Energy monitoring system
+- Sensor-based automation
 
 ---
 
@@ -156,4 +163,4 @@ Thejaswini C
 
 # GitHub Repository Description
 
-ESP32-based IoT light control system using Blynk Cloud and Wokwi simulation for real-time wireless LED control.
+ESP32-based wireless IoT light control system using Blynk Cloud and Wokwi simulation for real-time mobile-controlled automation.
